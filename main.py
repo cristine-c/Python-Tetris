@@ -26,9 +26,9 @@ game = Game()
 
 # creates a timer to trigger game update event every ms
 GAME_UPDATE = pygame.USEREVENT
-pygame.time.set_timer(GAME_UPDATE, 280)
-
-KEY_DELAY = 185
+UPDATE_RATE = 280
+pygame.time.set_timer(GAME_UPDATE, UPDATE_RATE)
+KEY_DELAY = UPDATE_RATE
 pygame.key.set_repeat(KEY_DELAY)
 rotate_repeat_time = 0
 rotate_repeat_interval = 0.25
@@ -81,3 +81,4 @@ while True:
   pygame.display.update()
   # 60 frames per second
   clock.tick(60)
+
